@@ -13,10 +13,10 @@ def download_and_unzip(url, extract_to='.'):
     zipfile = ZipFile(BytesIO(http_response.read()))
     zipfile.extractall(path=extract_to)
     
-zf = zipfile.ZipFile('ETHUSDT_data.csv') 
-zf.namelist() 
+# zf = zipfile.ZipFile('ETHUSDT_data.csv') 
+# zf.namelist() 
 # df = pd.read_csv(zf.open('intfile.csv'))
 
-# DATA = pd.read_csv('ETHUSDT_data.csv')
-# st.subheader('Raw data')
-# st.write(DATA)
+DATA = pd.read_csv('ETHUSDT_data.csv')
+st.subheader('Raw data')
+st.write(DATA)
